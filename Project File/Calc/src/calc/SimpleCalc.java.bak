@@ -1,0 +1,66 @@
+                   //Basic calculator//
+           //written by E.siva kumar. FS05//
+
+package calc; // it is a collection of classes like a folder.
+
+import java.util.Scanner; //default java utility package to perform scan operation
+
+public class SimpleCalc { // it is the collection of fields and methods 
+
+	public static void main(String[] args) { // this is the actual main method from where the actual program begins.
+	
+      int result; //initializing final result 
+        
+	Scanner sc = new Scanner(System.in); //initializing scanner class to take input form keyboard
+		System.out.println(""); //to add single line Gap
+	    System.out.println("                Welcome to Calculator App              "); //appears welcome message on screen
+		System.out.println("");//to add single line Gap
+		System.out.println("Please enter Your First Number"); //To ask user to enter the first number.
+        int a = sc.nextInt(); //Reads the Integer data from Keyboard.
+		
+		System.out.println(""); //to add single line Gap
+		System.out.println("Please enter Your Second Number"); //to Ask user to enter the second number
+        int b = sc.nextInt(); //Reads the integer data from Keyboard
+				
+		System.out.println(""); //to add single line Gap
+		System.out.println("Please enter Operator"); //to ask user to enter the operator
+       char operator = sc.next().charAt(0); //Reads the arithmetic operand
+       	System.out.println(""); // adding single line gap 
+		
+	   if(operator =='+') // ** Actual calculator logic starts from here**// 
+		{
+			result = a+b; // add given inputs
+			System.out.println("The result is: "+result); //print the result
+			
+		}
+	   else if (operator =='-') //else check is it a subtraction operator
+	   {
+		   result = a-b; // perform subtraction operation 
+		   System.out.println("The result is : "+result); //print the value in result
+		   
+	   }
+	   else if (operator =='*') //else check is it a multiplication operator
+	   {
+		   result = a*b; //perform multiplication
+		   System.out.println("The result is : "+result);// print the value in result
+		   
+	   }
+	   else if (operator =='/') //else check is it a division operator
+	   {
+		   result = a/b; // perform division operation
+		   System.out.println("The result is : "+result); //print the value in result
+	   }  
+	 else if (operator =='%') // else if check is it a modular operation
+		   {
+			   result = a%b; //perform modular operation 
+			   System.out.println("The result is : "+result); //print the value in result
+		   
+	   }
+	   else // if any other operator 
+	   {
+	       System.out.println("invalid Operator"); //ask the user to enter valid operator
+	   }
+	}
+
+}          //*****Thankyou odin school*****//
+
